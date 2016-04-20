@@ -14,7 +14,7 @@ RUN yum install -y epel-release && \
 # Install Oracle JDK 8u60
 RUN cd /tmp && \
     curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" -k "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz" && \
-    tar xf jdk-8u60-linux-x64.tar.gz -C /opt/java && \
+    mkdir -p /opt/java && tar xf jdk-8u60-linux-x64.tar.gz -C /opt/java && \
     rm -f jdk-8u60-linux-x64.tar.gz && \
     ln -s /opt/java/jdk* /opt/jdk1.8
 
