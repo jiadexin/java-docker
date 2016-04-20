@@ -10,7 +10,7 @@ RUN yum install -y epel-release && \
  yum makecache && \
  yum install -y man passwd sudo tar which git mlocate bzip2 net-tools\
  openssh-clients openssh-server
- 
+
 # Install Oracle JDK 8u60
 RUN cd /tmp && \
     curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" -k "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz" && \
