@@ -18,6 +18,9 @@ RUN cd /tmp && \
     rm -f jdk-8u60-linux-x64.tar.gz && \
     ln -s /opt/java/jdk* /opt/jdk1.8
 
+#clean yum cache
+RUN yum clean all
+
 ENV JAVA_HOME=/opt/jdk1.8
 ENV PATH=$JAVA_HOME/bin:$PATH
 
